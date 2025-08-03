@@ -1,16 +1,28 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CountUp from '../components/CountUp.astro';
+import Section from '../components/Section.astro';
+import { getCollection } from 'astro:content';
+import ProjectCard from '../components/ProjectCard.astro';
+import SectionSpacer from '../components/SectionSpacer.astro';
+import StatsGrid from '../components/StatsGrid.astro';
+import InvestorGrid from '../components/InvestorGrid.astro';
 
+const projects = await getCollection('projects');
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro2</h1>
-	</body>
-</html>
+<Layout title="Welcome to Astro.">
+	<Header gridBg>
+		<small class="small"></small>
+		<h1 class="text-12 leading-12 lg:text-20 lg:leading-20"><span class="font-mono">SEO + AI</span> + WEB3</h1>
+		<p class="subtitle w-85% lg:w-50% mx-auto mt-5">Builder. Optimizer. Thinker.</p>
+	</Header>
+	<main>
+		<Section fullWidthBorder class="text-center flex flex-col items-center justify-center py-5">
+			<h2 class="title py-5">Hi!</h2>
+			<p class="subtitle-small">I'm an SEO professional who loves building things — quick, useful tools powered by AI. Whether it's for smarter search, Web3 ideas, or personal projects, I use tech to solve real problems fast.</p>
+		</Section>
+	
+	</main>
+</Layout>
