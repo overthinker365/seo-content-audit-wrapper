@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/tools/seo-audit/:path*",
+      "destination": "https://seo-content-audit-app-production.up.railway.app/:path*"
+    }
+  ]
+}
